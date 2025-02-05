@@ -17,12 +17,17 @@ function navigateToFlights(driver){
     driver.findElement(By.linkText("Flights")).click();
 }
 
+async function navigateToSignOff(driver){
+    driver.findElement(By.linkText("SIGN-OFF")).click();
+}
+
 
 module.exports = {
     navigateToHomePage,
+    navigateToRegisterPage,
     navigateToSignon,
     navigateToFlights,
-    navigateToRegisterPage
+    navigateToSignOff
 }
 
 

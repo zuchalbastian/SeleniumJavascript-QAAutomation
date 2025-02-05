@@ -7,12 +7,13 @@ var driver = new webDriver.Builder().forBrowser('chrome').build();
 
 async function testOne(){
    homePage.navigateToHomePage(driver);
-   homePage.navigateToSignon(driver);
-   homePage.navigateToFlights(driver);
+   await driver.sleep(8000);
    homePage.navigateToRegisterPage(driver);
    await driver.sleep(8000);
    registerPage.fillForm(driver);
    await driver.sleep(9000);
+   homePage.navigateToSignOff(driver);
+   await driver.sleep(5000);
    driver.close();
 }
 
